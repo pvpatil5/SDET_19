@@ -2,13 +2,15 @@ package com.genericutil;
 
 import java.util.Random;
 
-public class JavaUtil {
+import org.testng.annotations.Test;
 
-	public int createrandonNum() 
+public class JavaUtil {
+@Test
+	public void  createrandonNum() 
 	{
 		Random r=new Random();
 		int ran=r.nextInt(1000);
-		return ran;
+		System.out.println(ran);
 	}
 	
 }
