@@ -58,12 +58,11 @@ public class CreateOrg extends ReadData_prop {
 
 		WebElement typeDropDown = driver.findElement(By.name("accounttype"));
 		wdu.select_DD(typeDropDown, "Analyst");
-		
-	
-		//
-		//		WebElement ratingDropDown = driver.findElement(By.name("rating"));
-		//		Select select2=new Select(ratingDropDown);
-		//		select2.selectByValue("Active");
+
+
+
+		WebElement ratingDropDown = driver.findElement(By.name("rating"));
+		wdu.select_DD(ratingDropDown, "Active");
 
 
 		WebElement saveBtn = driver.findElement(By.xpath("//input[@class='crmbutton small save']"));
