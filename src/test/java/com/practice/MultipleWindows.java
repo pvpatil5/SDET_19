@@ -3,15 +3,14 @@ package com.practice;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class MultipleWindows {
+ class MultipleWindows {
 	@Test
 	public void multiplewindow() throws InterruptedException {
+		
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("http://www.naukri.com/");
@@ -26,6 +25,7 @@ public class MultipleWindows {
 		Set<String> windows = driver.getWindowHandles();
 		System.out.println(windows.size());
 
+		//Iterator<String> it = windows.iterator();
 		Iterator<String> it = windows.iterator();
 		
 		while(it.hasNext()) 
@@ -35,7 +35,7 @@ public class MultipleWindows {
 			System.out.println(driver.switchTo().window(window).getTitle());
 			if(driver.getTitle().contains("Genpact")) 
 			{
-				driver.close();
+			
 				break;
 			}
 

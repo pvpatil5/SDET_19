@@ -6,11 +6,11 @@ import org.testng.annotations.Test;
 
 public class JavaUtil {
 @Test
-	public void  createrandonNum() 
+	public int  createrandonNum() 
 	{
 		Random r=new Random();
-		int ran=r.nextInt(1000);
-		System.out.println(ran);
+		return  r.nextInt(1000);
+		
 	}
 	
 }
