@@ -6,7 +6,7 @@ import java.util.HashMap;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-public class ReadData_jason {
+public class JasonUtility {
 
 	/**
 	 * @author PAVAN
@@ -19,7 +19,7 @@ public class ReadData_jason {
 	public String readDataJSON(String key) throws IOException, ParseException
 	{
 
-		FileReader inputfile = new FileReader("../SDET_19/SDET19.json");
+		FileReader inputfile = new FileReader(AutoConstants.JSONfilepath);
 
 		//Parsing the JSON into JAVA 
 		JSONParser parser = new JSONParser();

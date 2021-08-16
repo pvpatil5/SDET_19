@@ -1,16 +1,14 @@
 package com.practice;
 
 import java.io.IOException;
-
 import org.apache.poi.EncryptedDocumentException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import com.genericutil.ExcelUtility;
 
-import com.genericutil.ReadData_Excel;
-
-public class DataProvider_Excel  extends ReadData_Excel
+public class DataProvider_Excel 
 {
-
+	ExcelUtility excel = new ExcelUtility();
 	@Test(dataProvider = "getvalues")
 	public void sdet(String s1,String s2)
 	{
@@ -20,12 +18,12 @@ public class DataProvider_Excel  extends ReadData_Excel
 	@DataProvider
 	public Object[][] getvalues() throws EncryptedDocumentException, IOException 
 	{
-		int  lastrow=	getlastrow();
+		int  lastrow=	excel.getlastrow();
 		Object[] [] arr = new  Object[lastrow+1] [2];
 		for (int i = 0; i < lastrow+1; i++)
 		{
-			arr[i][0]= readDataExcel("Sheet2", i, 0);
-			arr[i][1]= readDataExcel("Sheet2", i, 1);
+			arr[i][0]= excel.readDataExcel("Sheet2", i, 0);
+			arr[i][1]= excel.readDataExcel("Sheet2", i, 1);
 		}
 		return arr;
 	}

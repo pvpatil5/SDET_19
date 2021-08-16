@@ -1,8 +1,6 @@
 package com.Vtiger;
 
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -11,7 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import com.genericutil.ReadData_prop;
+import com.genericutil.FileUtility;
+import com.genericutil.WebDriver_Utility;
 
 public class CreateContact_Org
 {
@@ -19,12 +18,12 @@ public class CreateContact_Org
 	public void createContact() throws InterruptedException, IOException {
 		WebDriver driver= new ChromeDriver();
 		driver.manage().window().maximize();
-		ReadData_prop propfile = new ReadData_prop();
-		driver.get(propfile.readDatafrompropfile(("url")));
+		FileUtility fileutility = new FileUtility();
+		driver.get(fileutility.readDatafrompropfile(("url")));
 
-		String UN = propfile.readDatafrompropfile("UN");
+		String UN = fileutility.readDatafrompropfile("UN");
 
-		String pwd = propfile.readDatafrompropfile("PWD");
+		String pwd = fileutility.readDatafrompropfile("PWD");
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -46,31 +45,23 @@ public class CreateContact_Org
 		WebElement addOrgNameBtn = driver.findElement(By.xpath("//img[@title='Select']"));
 		addOrgNameBtn.click();
 
-		Set<String> windowId = driver.getWindowHandles();
-		Iterator<String> iterator=windowId.iterator();
-
-		while(iterator.hasNext()) 
-		{
-			String window=iterator.next();
-			String title= driver.switchTo().window(window).getTitle();
-			if(title.contains("Accounts")) 
-			{	
-				break;
-			}
-
-		}
+		WebDriver_Utility wdu = new WebDriver_Utility();
+		wdu.switchwindow(driver, "Accounts");
 
 		driver.findElement(By.xpath("//input[@id='search_txt']")).sendKeys("PAVAN123");
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//input[@name='search']")).click();
 		driver.findElement(By.xpath("//a[text()='PAVAN123']")).click();
 
-		//		Set<String> windowId = driver.getWindowHandles();
-		//		Iterator<String> iterator=windowId.iterator();
+		wdu.switchwindow(driver, "VTiger");
 
+		driver.findElement(By.xpath("//input[@class='crmButton small save']")).click();
 
-		//driver.findElement(By.xpath("//input[@class='crmButton small save']")).click();
+		WebElement logout=driver.findElement(By.xpath("//img[@src='themes/softed/images/user.PNG']"));
 
+		wdu.movetoelement(driver, logout);
+
+		driver.findElement(By.xpath("//a[text()='Sign Out']")).click();
 
 	}
 }

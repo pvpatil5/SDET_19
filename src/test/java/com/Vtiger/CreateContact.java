@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import com.genericutil.ReadData_prop;
+import com.genericutil.FileUtility;
 
 public class CreateContact
 {
@@ -17,12 +17,12 @@ public class CreateContact
 	public void createContact() throws InterruptedException, IOException {
 		WebDriver driver= new ChromeDriver();
 		driver.manage().window().maximize();
-		ReadData_prop propfile = new ReadData_prop();
-		driver.get(propfile.readDatafrompropfile(("url")));
+		FileUtility fileutility = new FileUtility();
+		driver.get(fileutility.readDatafrompropfile(("url")));
 
-		String UN = propfile.readDatafrompropfile("UN");
+		String UN = fileutility.readDatafrompropfile("UN");
 
-		String pwd = propfile.readDatafrompropfile("PWD");
+		String pwd = fileutility.readDatafrompropfile("PWD");
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 

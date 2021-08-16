@@ -1,16 +1,14 @@
 package com.practice;
 
 import java.io.IOException;
-
 import org.apache.poi.EncryptedDocumentException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import com.genericutil.ReadData_Excel;
+import com.genericutil.ExcelUtility;
 
 public class DataProvider_1 
 {
-	ReadData_Excel excel = new ReadData_Excel();
+	ExcelUtility excel = new ExcelUtility();
 	
 	@Test(dataProvider = "getValues")
 	public void readDAta(String s1, String s2) 
