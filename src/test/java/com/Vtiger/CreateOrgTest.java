@@ -15,7 +15,7 @@ import com.objectrepo.OrgInfoPage;
 public class CreateOrgTest  extends BaseClass
 {
 
-	@Test
+	@Test(enabled = false)
 	public void createOrg() throws IOException, InterruptedException
 	{
 		HomePage hp = new HomePage(driver);

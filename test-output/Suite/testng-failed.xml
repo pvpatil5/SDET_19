@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="smokeTest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.TestNG.Sample2">
+        <methods>
+          <include name="logintoApp"/>
+          <include name="sample2_test1"/>
+          <include name="logout"/>
+          <include name="launch_browser"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.TestNG.Sample2 -->
+      <class name="com.TestNG.Sample1">
+        <methods>
+          <include name="logintoApp"/>
+          <include name="logout"/>
+          <include name="launch_browser"/>
+          <include name="closeBrowser"/>
+          <include name="test1"/>
+        </methods>
+      </class> <!-- com.TestNG.Sample1 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

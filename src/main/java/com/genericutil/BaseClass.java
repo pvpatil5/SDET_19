@@ -11,6 +11,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.objectrepo.HomePage;
 import com.objectrepo.LoginPage;
@@ -34,10 +35,11 @@ public class BaseClass
 	}
 
 
+	@Parameters("BROWSER")
 	@BeforeClass
-	public void launchBrowser() throws IOException 
+	public void launchBrowser(String BROWSER) throws IOException 
 	{
-		String BROWSER =fileutility.readDatafrompropfile("browser");
+		//String BROWSER =fileutility.readDatafrompropfile("browser");
 
 		if(BROWSER.equalsIgnoreCase("Chrome")) 
 		{

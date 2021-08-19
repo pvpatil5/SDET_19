@@ -6,16 +6,14 @@
   <test name="Test Chrome">
   <parameter name="BROWSER" value= "Chrome"/>
     <classes>
-      <class name="com.TestNG.Sample2"/>
-      <class name="com.TestNG.Sample1"/>
+      <class name="com.Vtiger.CreateContact_OrgTest"/>
     </classes>
   </test> <!-- Test -->
   
   <test name="Test Firefox">
   <parameter name="BROWSER" value= "firefox"/>
     <classes>
-      <class name="com.TestNG.Sample2"/>
-      <class name="com.TestNG.Sample1"/>
+     <class name="com.Vtiger.CreateContact_OrgTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
