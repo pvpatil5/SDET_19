@@ -15,10 +15,11 @@ public class JavaUtil {
 		return  r.nextInt(1000);
 
 	}
-
+	
 	Date dateobj = new  Date();
 	String currentdate = dateobj.toString();
 	String[] arr = currentdate.split(" ");
+	
 	/**
 	 * Get Month
 	 * @return
@@ -42,6 +43,7 @@ public class JavaUtil {
 	 */
 	public String getCurrentDate()
 	{
+
 		String day = arr[0];
 		String month = arr[1];
 		String todaysdate = arr[2];

@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,6 +34,11 @@ public class WebDriver_Utility
 		Select select= new Select(element);
 		select.selectByVisibleText(text);
 
+	}
+
+	public void maximizewindow(WebDriver driver) 
+	{
+		driver.manage().window().maximize();
 	}
 
 	/**
@@ -123,7 +129,7 @@ public class WebDriver_Utility
 	 */
 	public void movetoelement(WebDriver driver, WebElement element) {
 		Actions action = new Actions(driver);
-		action.moveToElement(element).perform();;
+		action.moveToElement(element).perform();
 	}
 	/**
 	 * this mtd is going to perform right click
@@ -199,6 +205,23 @@ public class WebDriver_Utility
 		js.executeScript("window.scrollBy(0,"+y+")", element);
 	}
 
+	/**
+	 * used to wait for expected element in GUI based on Xpath
+	 * @param element
+	 * @throws Throwable
+	 */
+	public void waitAndClick(WebDriver driver , String xpath) throws Throwable {
+		int count = 0;
+		while(count < 40) {
+			try {
+				driver.findElement(By.xpath(xpath)).click();
+				break;
+			}catch (Throwable e) {
+				Thread.sleep(500);
+				count++;
+			}
+		}
+	}
 
 
 }
