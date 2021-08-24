@@ -15,9 +15,12 @@ import com.objectrepo.OrgInfoPage;
 public class CreateOrgTest  extends BaseClass
 {
 
-	@Test(enabled = false)
-	public void createOrg() throws IOException, InterruptedException
+	@Test(groups= {"Smoke Test"})
+	public void createContact() throws IOException, InterruptedException
 	{
+	
+		test = report.createTest("createContact");
+		
 		HomePage hp = new HomePage(driver);
 		JavaUtil jv = new JavaUtil();
 		CreateOrgPage cop = new CreateOrgPage(driver);
@@ -35,9 +38,10 @@ public class CreateOrgTest  extends BaseClass
 		cop.getSaveorgbtn().click();
 	}
 	
-	@Test
+	@Test(groups= {"Regression Test"})
 	public void createOrg_withDD() 
 	{
+		test = report.createTest("createOrg_withDD");
 		HomePage hp = new HomePage(driver);
 		JavaUtil jv = new JavaUtil();
 		WebDriver_Utility wdu = new WebDriver_Utility();

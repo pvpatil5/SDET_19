@@ -13,8 +13,9 @@ import com.objectrepo.HomePage;
 public class CreateContact_OrgTest extends BaseClass
 {
 	
-	@Test
+	@Test(groups= {"Regression Test"})
 	public void createContactTest() throws Throwable {
+		test=report.createTest("createContactTest");
 		
 		WebDriver_Utility wdu = new WebDriver_Utility();
 

@@ -1,79 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="59553" started-at="2021-08-19T06:09:50Z" finished-at="2021-08-19T06:10:50Z">
+  <suite name="Default suite" duration-ms="58284" started-at="2021-08-23T15:58:32 IST" finished-at="2021-08-23T15:59:30 IST">
     <groups>
+      <group name="Regression Test">
+        <method signature="CreateOrgTest.createOrg_withDD()[pri:0, instance:com.Vtiger.CreateOrgTest@7a1ebcd8]" name="createOrg_withDD" class="com.Vtiger.CreateOrgTest"/>
+      </group> <!-- Regression Test -->
+      <group name="Smoke Test">
+        <method signature="CreateOrgTest.createContact()[pri:0, instance:com.Vtiger.CreateOrgTest@7a1ebcd8]" name="createContact" class="com.Vtiger.CreateOrgTest"/>
+      </group> <!-- Smoke Test -->
     </groups>
-    <test name="testrunner2" duration-ms="51007" started-at="2021-08-19T06:09:50Z" finished-at="2021-08-19T06:10:41Z">
+    <test name="Default test" duration-ms="58284" started-at="2021-08-23T15:58:32 IST" finished-at="2021-08-23T15:59:30 IST">
       <class name="com.Vtiger.CreateOrgTest">
-        <test-method status="PASS" signature="setup_JDBC_Report()[pri:0, instance:com.Vtiger.CreateOrgTest@3bd40a57]" name="setup_JDBC_Report" is-config="true" duration-ms="26" started-at="2021-08-19T06:09:50Z" finished-at="2021-08-19T06:09:50Z">
+        <test-method status="PASS" signature="setup_JDBC_Report()[pri:0, instance:com.Vtiger.CreateOrgTest@7a1ebcd8]" name="setup_JDBC_Report" is-config="true" duration-ms="271" started-at="2021-08-23T15:58:31 IST" finished-at="2021-08-23T15:58:32 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup_JDBC_Report -->
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.Vtiger.CreateOrgTest@3bd40a57]" name="launchBrowser" is-config="true" duration-ms="7890" started-at="2021-08-19T06:09:50Z" finished-at="2021-08-19T06:09:58Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.Vtiger.CreateOrgTest@7a1ebcd8]" name="launchBrowser" is-config="true" duration-ms="5732" started-at="2021-08-23T15:58:32 IST" finished-at="2021-08-23T15:58:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="logintoVtiger()[pri:0, instance:com.Vtiger.CreateOrgTest@7a1ebcd8]" name="logintoVtiger" is-config="true" duration-ms="7636" started-at="2021-08-23T15:58:37 IST" finished-at="2021-08-23T15:58:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logintoVtiger -->
+        <test-method status="PASS" signature="createContact()[pri:0, instance:com.Vtiger.CreateOrgTest@7a1ebcd8]" name="createContact" duration-ms="10340" started-at="2021-08-23T15:58:45 IST" finished-at="2021-08-23T15:58:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createContact -->
+        <test-method status="PASS" signature="logoutVtiger(org.testng.ITestResult)[pri:0, instance:com.Vtiger.CreateOrgTest@7a1ebcd8]" name="logoutVtiger" is-config="true" duration-ms="8722" started-at="2021-08-23T15:58:55 IST" finished-at="2021-08-23T15:59:04 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Chrome]]>
+                <![CDATA[[TestResult name=createContact status=SUCCESS method=CreateOrgTest.createContact()[pri:0, instance:com.Vtiger.CreateOrgTest@7a1ebcd8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="logintoVtiger()[pri:0, instance:com.Vtiger.CreateOrgTest@3bd40a57]" name="logintoVtiger" is-config="true" duration-ms="12944" started-at="2021-08-19T06:09:58Z" finished-at="2021-08-19T06:10:11Z">
+        </test-method> <!-- logoutVtiger -->
+        <test-method status="PASS" signature="logintoVtiger()[pri:0, instance:com.Vtiger.CreateOrgTest@7a1ebcd8]" name="logintoVtiger" is-config="true" duration-ms="5110" started-at="2021-08-23T15:59:04 IST" finished-at="2021-08-23T15:59:09 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintoVtiger -->
-        <test-method status="PASS" signature="createOrg_withDD()[pri:0, instance:com.Vtiger.CreateOrgTest@3bd40a57]" name="createOrg_withDD" duration-ms="16563" started-at="2021-08-19T06:10:11Z" finished-at="2021-08-19T06:10:28Z">
+        <test-method status="PASS" signature="createOrg_withDD()[pri:0, instance:com.Vtiger.CreateOrgTest@7a1ebcd8]" name="createOrg_withDD" duration-ms="11925" started-at="2021-08-23T15:59:09 IST" finished-at="2021-08-23T15:59:21 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createOrg_withDD -->
-        <test-method status="PASS" signature="logoutVtiger()[pri:0, instance:com.Vtiger.CreateOrgTest@3bd40a57]" name="logoutVtiger" is-config="true" duration-ms="9751" started-at="2021-08-19T06:10:28Z" finished-at="2021-08-19T06:10:37Z">
+        <test-method status="PASS" signature="logoutVtiger(org.testng.ITestResult)[pri:0, instance:com.Vtiger.CreateOrgTest@7a1ebcd8]" name="logoutVtiger" is-config="true" duration-ms="8364" started-at="2021-08-23T15:59:21 IST" finished-at="2021-08-23T15:59:30 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createOrg_withDD status=SUCCESS method=CreateOrgTest.createOrg_withDD()[pri:0, instance:com.Vtiger.CreateOrgTest@7a1ebcd8] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutVtiger -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.Vtiger.CreateOrgTest@3bd40a57]" name="closeBrowser" is-config="true" duration-ms="3811" started-at="2021-08-19T06:10:37Z" finished-at="2021-08-19T06:10:41Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.Vtiger.CreateOrgTest@7a1ebcd8]" name="closeBrowser" is-config="true" duration-ms="396" started-at="2021-08-23T15:59:30 IST" finished-at="2021-08-23T15:59:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="close_JDBC_Report()[pri:0, instance:com.Vtiger.CreateOrgTest@3bd40a57]" name="close_JDBC_Report" is-config="true" duration-ms="2" started-at="2021-08-19T06:10:50Z" finished-at="2021-08-19T06:10:50Z">
+        <test-method status="PASS" signature="close_JDBC_Report()[pri:0, instance:com.Vtiger.CreateOrgTest@7a1ebcd8]" name="close_JDBC_Report" is-config="true" duration-ms="894" started-at="2021-08-23T15:59:30 IST" finished-at="2021-08-23T15:59:31 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close_JDBC_Report -->
       </class> <!-- com.Vtiger.CreateOrgTest -->
-    </test> <!-- testrunner2 -->
-    <test name="testRunner-1" duration-ms="59553" started-at="2021-08-19T06:09:50Z" finished-at="2021-08-19T06:10:50Z">
-      <class name="com.Vtiger.CreateContact_OrgTest">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.Vtiger.CreateContact_OrgTest@7920ba90]" name="launchBrowser" is-config="true" duration-ms="8234" started-at="2021-08-19T06:09:50Z" finished-at="2021-08-19T06:09:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="logintoVtiger()[pri:0, instance:com.Vtiger.CreateContact_OrgTest@7920ba90]" name="logintoVtiger" is-config="true" duration-ms="12118" started-at="2021-08-19T06:09:58Z" finished-at="2021-08-19T06:10:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintoVtiger -->
-        <test-method status="PASS" signature="createContactTest()[pri:0, instance:com.Vtiger.CreateContact_OrgTest@7920ba90]" name="createContactTest" duration-ms="31335" started-at="2021-08-19T06:10:10Z" finished-at="2021-08-19T06:10:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createContactTest -->
-        <test-method status="PASS" signature="logoutVtiger()[pri:0, instance:com.Vtiger.CreateContact_OrgTest@7920ba90]" name="logoutVtiger" is-config="true" duration-ms="7266" started-at="2021-08-19T06:10:42Z" finished-at="2021-08-19T06:10:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logoutVtiger -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.Vtiger.CreateContact_OrgTest@7920ba90]" name="closeBrowser" is-config="true" duration-ms="575" started-at="2021-08-19T06:10:49Z" finished-at="2021-08-19T06:10:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.Vtiger.CreateContact_OrgTest -->
-    </test> <!-- testRunner-1 -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

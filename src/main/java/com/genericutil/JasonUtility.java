@@ -26,6 +26,7 @@ public class JasonUtility {
 		Object obj = parser.parse(inputfile);
 
 		//type cast the object and just read the data
+		@SuppressWarnings("rawtypes")
 		HashMap jobj = (HashMap) obj;
 
 		String value = jobj.get(key).toString();

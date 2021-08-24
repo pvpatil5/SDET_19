@@ -10,9 +10,10 @@ import com.objectrepo.HomePage;
 
 public class CreateContactTest extends BaseClass
 {
-	@Test
+	@Test(groups= {"Smoke Test"})
 	public void createContact() throws InterruptedException, IOException
 	{
+		test=report.createTest("createContact");
 		
 		HomePage hp = new HomePage(driver);
 		hp.getContactslink().click();
