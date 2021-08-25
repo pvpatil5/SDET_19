@@ -28,4 +28,22 @@ public class CreateContactTest extends BaseClass
 
 
 	}
+	@Test(groups= {"Regression Test"})
+	public void createContactnew() throws InterruptedException, IOException
+	{
+	
+		
+		HomePage hp = new HomePage(driver);
+		hp.getContactslink().click();
+
+		ContactInfoPage cp = new ContactInfoPage(driver);
+		cp.getCreatecontactsimg().click();
+
+		CreateContactPage cc= new  CreateContactPage(driver);
+		cc.getLastNameEdt().sendKeys("sharma");
+		
+		cc.getSaveBtn().click();
+
+
+	}
 }
