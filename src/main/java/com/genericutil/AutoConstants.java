@@ -6,10 +6,13 @@ public interface AutoConstants
  * All the Paths w.r.t. project will be available here
  */
 {
-	String propfile="../SDET_19/src/test/resources/CommonData.properties";
-	String JSONfilepath="../SDET_19/SDET19.json";
-	String XMLfilepath="../SDET_19/src/test/resources/CommonDAta.xml";
-	String Excelpath="../SDET_19/src/test/resources/SDET_19.xlsx";
+	public static String DirPath = System.getProperty("user.dir");
+	
+	
+	String propfile=DirPath+"/src/test/resources/CommonData.properties";
+	String JSONfilepath=DirPath+"/SDET19.json";
+	String XMLfilepath=DirPath+"/src/test/resources/CommonDAta.xml";
+	String Excelpath=DirPath+"/src/test/resources/SDET_19.xlsx";
 
 	int timeforimplicitwait=10;
 	int timeforexplicitwait=10;
