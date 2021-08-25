@@ -19,8 +19,6 @@ public class CreateOrgTest  extends BaseClass
 	public void createContact() throws IOException, InterruptedException
 	{
 	
-		test = report.createTest("createContact");
-		
 		HomePage hp = new HomePage(driver);
 		JavaUtil jv = new JavaUtil();
 		CreateOrgPage cop = new CreateOrgPage(driver);
@@ -41,7 +39,7 @@ public class CreateOrgTest  extends BaseClass
 	@Test(groups= {"Regression Test"})
 	public void createOrg_withDD() 
 	{
-		test = report.createTest("createOrg_withDD");
+		
 		HomePage hp = new HomePage(driver);
 		JavaUtil jv = new JavaUtil();
 		WebDriver_Utility wdu = new WebDriver_Utility();

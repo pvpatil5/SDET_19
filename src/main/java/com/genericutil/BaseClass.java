@@ -31,9 +31,6 @@ public class BaseClass
 	public  WebDriver driver;
 	public WebDriver_Utility wdu = new WebDriver_Utility();
 	public FileUtility fileutility = new FileUtility();
-	ExtentHtmlReporter reporter; // To apply look and feel of the report to set the path of extent report
-	public ExtentReports report; // Attach the path of reporter 
-	public	ExtentTest test;// To create entries in the test cases 
 	public static	WebDriver staticdriver;
 
 
@@ -42,18 +39,12 @@ public class BaseClass
 	public void setup_JDBC_Report() 
 	{
 		System.out.println("=====JDBC Connection Done====");
-		reporter= new ExtentHtmlReporter(System.getProperty("user.dir")+"/SDET19/newreport.html");//imp
-		reporter.config().setDocumentTitle("SDET12Report");
-		reporter.config().setReportName("Title");
-		reporter.config().setTheme(Theme.DARK);
 
-		report= new ExtentReports();//imp
-		report.attachReporter(reporter);//imp
 	}
 
 	@AfterSuite(groups = {"Smoke Test","Regression Test"})
 	public void close_JDBC_Report() {
-		report.flush();
+
 		System.out.println("=====JDBC Connection Closed====");
 	}
 
@@ -62,8 +53,8 @@ public class BaseClass
 	@BeforeClass(groups = {"Smoke Test","Regression Test"})
 	public void launchBrowser() throws IOException 
 	{
-		String BROWSER = System.getProperty("browser");
-		//String BROWSER =fileutility.readDatafrompropfile("browser");
+		//String BROWSER = System.getProperty("browser");
+		String BROWSER =fileutility.readDatafrompropfile("browser");
 
 		if(BROWSER.equalsIgnoreCase("Chrome")) 
 		{
@@ -76,11 +67,12 @@ public class BaseClass
 		else {
 			driver= new ChromeDriver();
 		}
-		String url = System.getProperty("URL");
-		staticdriver=driver;
-		driver.get(url);
+		//String url = System.getProperty("URL");
+
+		driver.get(fileutility.readDatafrompropfile("url"));
 		wdu.maximizewindow(driver);
 		wdu.pageloadtimeout(driver);
+		staticdriver=driver;
 	}
 
 	@AfterClass(groups = {"Smoke Test","Regression Test"})
@@ -100,25 +92,9 @@ public class BaseClass
 	public void logoutVtiger(ITestResult result) throws InterruptedException, IOException
 	{
 		HomePage hp = new HomePage(driver);
-		if(result.getStatus()==ITestResult.FAILURE) 
-		{
-			test.log(Status.FAIL, result.getName());//name of failed method
-			test.log(Status.FAIL, result.getThrowable());//Error msg
 
-			String	path=BaseClass.getscreenshot(result.getName());
+		hp.logoutfromApp();
 
-			test.addScreenCaptureFromPath(path);
-
-		}
-		else if (result.getStatus()==ITestResult.SUCCESS) 
-		{
-			test.log(Status.PASS, result.getName());
-			hp.logoutfromApp();
-		}
-		else if (result.getStatus()==ITestResult.SKIP) 
-		{
-			test.log(Status.SKIP, result.getName());
-		}
 	}
 	public static String getscreenshot( String name) throws IOException 
 	{

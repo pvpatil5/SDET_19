@@ -13,7 +13,7 @@ public class CreateContactTest extends BaseClass
 	@Test(groups= {"Smoke Test"})
 	public void createContact() throws InterruptedException, IOException
 	{
-		test=report.createTest("createContact");
+	
 		
 		HomePage hp = new HomePage(driver);
 		hp.getContactslink().click();
