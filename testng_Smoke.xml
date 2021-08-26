@@ -3,8 +3,8 @@
 <suite name="Suite">
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="com.TestNG.Sample2" />
-			<class name="com.TestNG.Sample1" />
+		<class name="com.Vtiger.CreateContactTest"/>
+      <class name="com.Vtiger.CreateOrgTest"/>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
