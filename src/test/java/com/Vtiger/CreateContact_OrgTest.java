@@ -13,7 +13,7 @@ import com.objectrepo.HomePage;
 public class CreateContact_OrgTest extends BaseClass
 {
 	
-	@Test(groups= {"Regression Test"})
+	@Test(groups= {"Regression Test"},retryAnalyzer = com.genericutil.RetryAnalyzer.class)
 	public void createContactTest() throws Throwable {
 	
 		

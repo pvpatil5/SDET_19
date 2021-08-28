@@ -3,7 +3,7 @@ package com.TestNG;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Sample2  extends BaseClass1
+public class Sample2 
 {
 	@Test(groups= {"smokeTest"})
 	public void sample2_test1() 

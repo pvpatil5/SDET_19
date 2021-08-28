@@ -3,11 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.practice.GetTitleHome">
+      <class name="com.Vtiger.CreateContactTest">
         <methods>
-          <include name="getTitleforHome"/>
+          <include name="setup_JDBC_Report"/>
+          <include name="launchBrowser"/>
+          <include name="logoutVtiger"/>
+          <include name="logintoVtiger"/>
+          <include name="closeBrowser"/>
+          <include name="close_JDBC_Report"/>
+          <include name="createContact"/>
+          <include name="createContactnew"/>
         </methods>
-      </class> <!-- com.practice.GetTitleHome -->
+      </class> <!-- com.Vtiger.CreateContactTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

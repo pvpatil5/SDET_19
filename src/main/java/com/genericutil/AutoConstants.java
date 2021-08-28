@@ -13,7 +13,7 @@ public interface AutoConstants
 	String JSONfilepath=DirPath+"/SDET19.json";
 	String XMLfilepath=DirPath+"/src/test/resources/CommonDAta.xml";
 	String Excelpath=DirPath+"/src/test/resources/SDET_19.xlsx";
-
+	String ExtentReportPath=DirPath+"/ExtentReports/Report_19";
 	int timeforimplicitwait=10;
 	int timeforexplicitwait=10;
 }

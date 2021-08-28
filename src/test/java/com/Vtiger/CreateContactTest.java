@@ -2,11 +2,14 @@ package com.Vtiger;
 
 import java.io.IOException;
 
+import org.junit.Assert;
 import org.testng.annotations.Test;
+
 import com.genericutil.BaseClass;
 import com.objectrepo.ContactInfoPage;
 import com.objectrepo.CreateContactPage;
 import com.objectrepo.HomePage;
+
 
 public class CreateContactTest extends BaseClass
 {
@@ -25,6 +28,8 @@ public class CreateContactTest extends BaseClass
 		cc.getLastNameEdt().sendKeys("sharma");
 		
 		cc.getSaveBtn().click();
+		
+		Assert.assertEquals(false, true);
 
 
 	}
@@ -43,6 +48,7 @@ public class CreateContactTest extends BaseClass
 		cc.getLastNameEdt().sendKeys("sharma");
 		
 		cc.getSaveBtn().click();
+		Assert.assertEquals(true, true);
 
 
 	}
