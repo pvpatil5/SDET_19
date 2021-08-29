@@ -12,6 +12,7 @@ public class BM_AM {
 	{
 		Assert.assertEquals(true, true);
 		System.out.println("Login Successful");
+		System.out.println("Login Successful");
 	}
 
 	@Test
