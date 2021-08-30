@@ -57,7 +57,7 @@ public class Extent12
 
 		System.out.println(driver.getTitle());
 
-
+		System.out.println("New line");
 
 	}
 
