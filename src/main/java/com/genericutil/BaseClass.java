@@ -98,6 +98,11 @@ public class BaseClass
 		System.out.println("=====JDBC New  Connection 2====");
 	}
 	
+	public void setupJDBCConnection_3()
+	{
+		System.out.println("=====JDBC New  Connection 3====");
+	}
+	
 	
 	
 	

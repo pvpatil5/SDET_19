@@ -7,7 +7,7 @@ public class RetryAnalyzer implements IRetryAnalyzer {
 
 	int count=0;
 	
-	int retryCount=3;
+	int retryCount=4;
 	
 	@Override
 	public boolean retry(ITestResult result) {
