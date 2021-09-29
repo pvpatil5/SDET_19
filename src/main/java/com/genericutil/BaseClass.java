@@ -37,6 +37,14 @@ public class BaseClass
 		System.out.println("=====JDBC Connection Done====");
 
 	}
+	
+	public void justGit() {
+		System.out.println("Git + HI");
+	}
+	
+	public void justGit(String s1) {
+		System.out.println("Git + HI");
+	}
 
 	@AfterSuite(groups = {"Smoke Test","Regression Test"})
 	public void close_JDBC_Report() {
