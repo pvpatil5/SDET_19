@@ -92,6 +92,15 @@ public class BaseClass
 		lp.loginintoApp();
 	}
 
+	
+	public void setupJDBC()
+	{
+		System.out.println("=====JDBC New  Connection 2====");
+	}
+	
+	
+	
+	
 	@AfterMethod(groups = {"Smoke Test","Regression Test"})
 	public void logoutVtiger(ITestResult result) throws InterruptedException, IOException
 	{
