@@ -123,5 +123,10 @@ public class BaseClass
 
 		return destfile;
 	}
+	
+	public void pavan()
+	{
+		System.out.println("Hii Pavan");
+	}
 
 }
