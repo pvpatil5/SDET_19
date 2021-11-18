@@ -21,6 +21,7 @@ FileReader inputfile = new FileReader("../SDET_19/SDET19.json");
 		Object obj = parser.parse(inputfile);
 		
 		//type cast the object and just read the data
+		@SuppressWarnings("rawtypes")
 		HashMap jobj = (HashMap) obj;
 		
 	//	String value = jobj.get("username").toString();

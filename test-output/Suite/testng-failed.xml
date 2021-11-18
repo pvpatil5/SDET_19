@@ -4,7 +4,6 @@
   <parameter name="BROWSER" value="Chrome"/>
   <listeners>
     <listener class-name="com.genericutil.ListnerS"/>
-    <listener class-name="com.genericutil.AnnotationTransformer"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>

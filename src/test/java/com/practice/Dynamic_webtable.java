@@ -23,22 +23,30 @@ public class Dynamic_webtable {
 		driver.findElement(By.id("submitButton")).click();
 
 		driver.findElement(By.xpath("//a[text()='Organizations']")).click();
-		
-		
+
+
 		//Get all Organization name
 
-				List<WebElement> orgname = driver.findElements(By.xpath("//table[@class='lvt small']/tbody/tr[*]/td[3]/a"));
+		List<WebElement> orgname = driver.findElements(By.xpath("//table[@class='lvt small']/tbody/tr[*]/td[3]/a"));
 		
-				for (int i = 0; i < orgname.size(); i++)
-				{
-					String s1=orgname.get(i).getText();
+		String orgnametodelete="SONY_TYSS311";
+		for (int i = 2; i < orgname.size(); i++)
+		{
+			String s1=orgname.get(i).getText();
+
+			if(s1.equalsIgnoreCase(orgnametodelete))
+			{
+				driver.findElement(By.xpath("//a[.='"+orgnametodelete+"']/../../td[1]/input")).click();
+				break;
+			}
+		}
 		
-					if(s1.equalsIgnoreCase("SDET_19"))
-					{
-						driver.findElement(By.xpath("//table[@class='lvt small']/tbody/tr["+i+"]/td[1]/input")).click();
-						break;
-					}
-				}
+		driver.findElement(By.xpath("//input[@class='crmbutton small delete']")).click();
+		
+		driver.switchTo().alert().accept();
+		
+		
+		
 
 		//		//Click on all check boxes
 		//		List<WebElement> chkbox=driver.findElements(By.xpath("//table[@class='lvt small']/tbody/tr[*]/td[1]/input"));
